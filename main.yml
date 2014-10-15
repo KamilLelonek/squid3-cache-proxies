@@ -1,0 +1,32 @@
+---
+- hosts:        all
+  gather_facts: no
+  sudo:         yes
+
+  tasks:
+    - name: add ssh keys
+      authorized_key:
+        user: '{{ item }}'
+        key:  "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      with_items:
+        - root
+        - vagrant
+
+    - name: install curl
+      action: apt pkg=curl state=present
+
+    - name: update ubuntu
+      apt:  update_cache=yes
+
+    - name: install squid
+      apt:  name=squid3 state=present
+
+    - name:   copy config file
+      copy:   src=squid.conf dest=/etc/squid3/squid.conf
+      notify: start squid
+
+  handlers:
+    - name: start squid
+      service:
+        name:  squid3
+        state: started

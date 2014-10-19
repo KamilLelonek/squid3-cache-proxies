@@ -1,6 +1,6 @@
 clearcache() {
   sudo stop squid3
-  rm -rf /var/spool/squid3/*
+  sudo rm -rf /var/spool/squid3/*
   squid3 -z
   start squid3
 }

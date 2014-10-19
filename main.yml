@@ -6,11 +6,8 @@
   tasks:
     - name: add ssh keys
       authorized_key:
-        user: '{{ item }}'
+        user: vagrant
         key:  "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
-      with_items:
-        - root
-        - vagrant
 
     - name: install curl
       action: apt pkg=curl state=present
@@ -18,8 +15,17 @@
     - name: update ubuntu
       apt:  update_cache=yes
 
-    - name: install squid
-      apt:  name=squid3 state=present
+    - name:   install squid
+      apt:    name=squid3 state=present
+      notify: start squid
 
-    - name: caopy aliases
+    - meta: flush_handlers
+
+    - name: copy aliases
       copy: src=.bash_aliases dest=/home/vagrant/.bash_aliases
+
+  handlers:
+    - name: start squid
+      service:
+        name:  squid3
+        state: started

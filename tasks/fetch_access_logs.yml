@@ -2,5 +2,5 @@
 - name: fetch access logs
   fetch:
     src: /var/log/squid3/access.log
-    dest: results/{{ hierarchy_name }}.log
+    dest: ../results/{{ hierarchy_name }}.log
     flat: yes

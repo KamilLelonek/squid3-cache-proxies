@@ -1,3 +1,4 @@
 ---
 - name: make curl request
-  command: curl -x {{ proxy_ip }}:3128 http://www.deepsloweasy.com/
+  sudo: false
+  local_action: command curl -x {{ proxy_ip }}:3128 http://www.deepsloweasy.com/

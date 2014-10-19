@@ -11,3 +11,4 @@ clearlogs() {
 }
 
 alias showlogs='sudo tail -f /var/log/squid3/access.log'
+alias showcache='sudo ls /var/spool/squid3/'

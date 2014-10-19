@@ -1,0 +1,4 @@
+---
+- name:   copy config file
+  copy:   src=squid.conf dest=/etc/squid3/squid.conf force=yes
+  notify: start squid

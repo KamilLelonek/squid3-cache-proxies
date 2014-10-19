@@ -21,15 +21,5 @@
     - name: install squid
       apt:  name=squid3 state=present
 
-    - name:   copy config file
-      copy:   src=squid.conf dest=/etc/squid3/squid.conf
-      notify: start squid
-
     - name: caopy aliases
       copy: src=.bash_aliases dest=/home/vagrant/.bash_aliases
-
-  handlers:
-    - name: start squid
-      service:
-        name:  squid3
-        state: started

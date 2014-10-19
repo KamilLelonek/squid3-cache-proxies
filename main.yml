@@ -25,6 +25,9 @@
       copy:   src=squid.conf dest=/etc/squid3/squid.conf
       notify: start squid
 
+    - name: caopy aliases
+      copy: src=.bash_aliases dest=/home/vagrant/.bash_aliases
+
   handlers:
     - name: start squid
       service:

@@ -40,6 +40,16 @@ You can use some useful commands to manage `squid3`:
 - `showlogs`
 - `clearlogs`
 
+## Hierarchies
+
+To run particular hierary:
+
+    ./scripts/run_hierarchy <NUMBER>
+
+To clear logs from all machines:
+
+    ./scripts/clear_access_logs
+
 ## Help
 
 If anything goes wrong you can destroy previously created machines by:

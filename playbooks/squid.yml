@@ -12,7 +12,7 @@
     - include: ../tasks/make_curl_request.yml
     - include: ../tasks/fetch_access_logs.yml
   handlers:
-    - name: restart squid
+    - name: reload squid
       service:
         name:  squid3
-        state: restarted
+        state: reloaded

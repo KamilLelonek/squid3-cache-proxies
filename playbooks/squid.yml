@@ -1,0 +1,18 @@
+---
+- hosts:        '{{ host }}'
+  gather_facts: no
+  sudo:         yes
+  vars:
+    line_proxy_path: '{{ squid_line_proxy_path }}'
+    proxy_ip:        '{{ squid_proxy_ip }}'
+    hierarchy_name:  '{{ squid_hierarchy_name }}'
+  tasks:
+    - include: ../tasks/copy_config_file.yml
+    - include: ../tasks/insert_proxy_path.yml
+    - include: ../tasks/make_curl_request.yml
+    - include: ../tasks/fetch_access_logs.yml
+  handlers:
+    - name: restart squid
+      service:
+        name:  squid3
+        state: restarted

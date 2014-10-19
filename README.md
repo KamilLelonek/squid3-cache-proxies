@@ -46,9 +46,9 @@ To run particular hierary:
 
     ./scripts/run_hierarchy <NUMBER>
 
-To clear logs from all machines:
+To clear logs and cache on all machines:
 
-    ./scripts/clear_access_logs
+    ./scripts/clear_cache_and_logs
 
 ## Help
 

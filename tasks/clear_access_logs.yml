@@ -1,3 +1,0 @@
----
-- name: clear access logs
-  command: rm /var/log/squid3/access.log

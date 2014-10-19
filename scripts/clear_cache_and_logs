@@ -1,0 +1,1 @@
+ansible all -i hosts -a 'sudo rm /var/log/squid3/access.log; rm -rf /var/spool/squid3/*; squid3 -z'  -u vagrant --private-key=~/.vagrant.d/insecure_private_key

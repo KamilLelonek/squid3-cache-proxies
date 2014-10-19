@@ -9,17 +9,17 @@
         user: vagrant
         key:  "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 
-    - name: install curl
+    - name:   install curl
       action: apt pkg=curl state=present
 
     - name: update ubuntu
       apt:  update_cache=yes
 
-    - name:   install squid
-      apt:    name=squid3 state=present
-      notify: start squid
+    - name: install squid
+      apt:  name=squid3 state=present
 
-    - meta: flush_handlers
+    - include: tasks/copy_config_file.yml
+      notify:  start squid
 
     - name: copy aliases
       copy: src=.bash_aliases dest=/home/vagrant/.bash_aliases

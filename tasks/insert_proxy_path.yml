@@ -4,4 +4,3 @@
     dest: /etc/squid3/squid.conf
     insertafter: EOF
     line: '{{ line_proxy_path }}'
-  notify: reload squid

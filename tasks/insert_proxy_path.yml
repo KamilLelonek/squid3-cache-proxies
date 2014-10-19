@@ -1,0 +1,6 @@
+---
+- name: insert proxy path
+  lineinfile:
+    dest: /etc/squid3/squid.conf
+    insertafter: EOF
+    line: '{{ line_proxy_path }}'

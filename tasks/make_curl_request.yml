@@ -1,0 +1,3 @@
+---
+- name: make curl request
+  command: curl -x {{ proxy_ip }}:3128 http://www.deepsloweasy.com/

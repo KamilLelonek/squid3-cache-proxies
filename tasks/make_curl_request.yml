@@ -1,5 +1,4 @@
 ---
 - name: make curl request
   sudo: false
-  # local_action: command curl -x {{ proxy_ip }}:3128 http://www.deepsloweasy.com/
-  command: curl -x {{ proxy_ip }}:3128 --connect-timeout 30 http://www.deepsloweasy.com/
+  local_action: command curl -x {{ proxy_ip }}:3128 http://www.google.pl/

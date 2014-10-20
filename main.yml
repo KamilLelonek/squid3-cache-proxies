@@ -12,6 +12,9 @@
     - name: update ubuntu
       apt:  update_cache=yes
 
+    - name: instal curl package
+      apt:  name=curl state=present
+
     - name: install squid
       apt:  name=squid3 state=present
 

@@ -7,6 +7,3 @@
     - include: ../tasks/insert_proxy_path.yml
     - include: ../tasks/reload_squid.yml
     - include: ../tasks/clear_cache_and_logs.yml
-    - include: ../tasks/make_curl_request.yml
-    - include: ../tasks/make_curl_request.yml
-    - include: ../tasks/fetch_access_logs.yml

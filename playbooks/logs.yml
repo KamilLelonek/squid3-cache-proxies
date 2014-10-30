@@ -1,0 +1,9 @@
+---
+- hosts: all
+  sudo:  yes
+  tasks:
+    - name: fetch access logs
+      fetch:
+        src: /var/log/squid3/access.log
+        dest: ../results/{{ ansible_hostname }}.log
+        flat: yes

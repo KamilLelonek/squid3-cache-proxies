@@ -31,6 +31,10 @@ You can connect to either of them:
 
 where `<VERSION>` is just machine number `1, 2 or 3`.
 
+You can request for server data through particular proxy:
+
+  curl -x <proxy_ip>:3128 http://www.example.com/
+
 ## Aliases
 
 You can use some useful commands to manage `squid3`:
@@ -42,9 +46,13 @@ You can use some useful commands to manage `squid3`:
 
 ## Hierarchies
 
-To run particular hierary:
+To setup particular hierary:
 
     ./scripts/run_hierarchy <NUMBER>
+
+To fetch logs from all machines:
+
+    ./scripts/fetch_logs
 
 To clear logs and cache on all machines:
 

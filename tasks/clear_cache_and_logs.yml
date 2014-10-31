@@ -1,9 +1,9 @@
 ---
-- name:  clear access logs
-  shell: echo '' > /var/log/squid3/access.log
-
 - name:    clear cache
   command: rm -rf /var/spool/squid3/*
 
 - name:    create cache dirs
   command: squid3 -z
+
+- name:    clear logs
+  command: rm -rf /var/log/squid3/*.log

@@ -3,7 +3,16 @@
   gather_facts: no
   sudo:         yes
   tasks:
+    - name: stop squid
+      service:
+        name:  squid3
+        state: stopped
+
     - include: ../tasks/copy_config_file.yml
     - include: ../tasks/insert_proxy_path.yml
-    - include: ../tasks/reload_squid.yml
     - include: ../tasks/clear_cache_and_logs.yml
+
+    - name: start squid
+      service:
+        name:  squid3
+        state: started

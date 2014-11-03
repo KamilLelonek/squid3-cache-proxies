@@ -1,9 +1,9 @@
 ---
-- name:    clear cache
-  command: rm -rf /var/spool/squid3/*
+- name:  clear cache
+  shell: rm -rf /var/spool/squid3/*
 
-- name:    create cache dirs
-  command: squid3 -z
+- name:  create cache dirs
+  shell: squid3 -z
 
-- name:    clear logs
-  command: rm -rf /var/log/squid3/*.log
+- name:  clear logs
+  shell: rm -rf /var/log/squid3/*.log

@@ -1,1 +1,1 @@
-ansible all -i hosts -m shell -a 'sudo service squid3 stop && sudo rm -rf /var/spool/squid3/* && sudo squid3 -z && sudo serivce squid3 start && sudo rm -rf /var/log/squid3/*.log'  -u vagrant --private-key=~/.vagrant.d/insecure_private_key
+ansible-playbook -i hosts playbooks/clear_cache_and_logs.yml -u vagrant --private-key=~/.vagrant.d/insecure_private_key

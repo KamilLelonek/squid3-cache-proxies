@@ -1,1 +1,1 @@
-ansible-playbook -i hosts playbooks/logs.yml -u vagrant --private-key=~/.vagrant.d/insecure_private_key
+ansible-playbook -i hosts playbooks/fetch_access_logs.yml -u vagrant --private-key=~/.vagrant.d/insecure_private_key

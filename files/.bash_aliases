@@ -13,3 +13,9 @@ clearlogs() {
 
 alias showlogs='sudo tail -f /var/log/squid3/access.log'
 alias showcache='sudo ls /var/spool/squid3/'
+
+alias squid_service='sudo service squid3'
+alias sstart='squid_service start'
+alias sstop='squid_service stop'
+alias srestart='squid_service restart'
+alias sstatus='squid_service status'

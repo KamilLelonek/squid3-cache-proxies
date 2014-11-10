@@ -46,6 +46,8 @@ You can use some useful commands to manage `squid3`:
 
 ## Hierarchies
 
+![hierarchies](https://d2oawfjgoy88bd.cloudfront.net/538df4ae007791166b92a197/538df4c8007791166b92a19a/5460836238d3871419ab800a.png?Expires=1415697719&Signature=DCW26fcrGKUiAnwr-zhyWqyOOPbUdljtmKFkNrs7Iy5eXIuUU0Majz7tEaZMSOemPZBBU6lUA8tqDJOvzNnI8JozdCvJXCoPzLKJX8JgTsxFw7OUlVS2dyiKi~8qtCYMUlWABBzYrW-RY8uZ1EreaRl6-kPDyC2eacIXcMt0mypWAuyiF-jksoN5iaZj-0tdRvZBiy9LRab-xF2a63T3nMY8AYqsX8tSZXyQJKjR1syHDpx81g5JFdta5WPRSV2iY0RMYbDPlKOH6Hg2jIpbAW5BCXjP6VngWNDphWityvLbp-nn6VNGxQSQcxUCCdIyVzAooUWwLtzbOkbHJ4crnQ__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA)
+
 To setup particular hierary:
 
     ./scripts/run_hierarchy <NUMBER>

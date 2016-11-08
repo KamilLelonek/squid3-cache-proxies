@@ -33,7 +33,7 @@ where `<VERSION>` is just machine number `1, 2 or 3`.
 
 You can request for server data through particular proxy:
 
-  curl -x <proxy_ip>:3128 http://www.example.com/
+    curl -x <proxy_ip>:3128 http://www.example.com/
 
 ## Aliases
 

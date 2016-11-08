@@ -1,4 +1,4 @@
-# Suid3 with Ansible and Vagrant
+# Squid3 with Ansible and Vagrant
 
 ## Prerequisites
 

@@ -3,5 +3,7 @@
   vars:
     host:            squid3
     proxy_ip:        '192.168.56.103'
-    line_proxy_path: 'cache_peer 192.168.56.101 parent 3128 3130 default\ncache_peer 192.168.56.102 parent 3128 3130 default'
+    line_proxy_path: |
+      cache_peer 192.168.56.101 parent 3128 3130 default
+      cache_peer 192.168.56.102 parent 3128 3130 default
     hierarchy_name:  'hierarchy3-squid3'
